@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+// components
+@import 'components/buttons';
+@import 'components/containers';
+@import 'components/forms';
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+h1 h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #272626;
+
+}
+
+a {
+  text-decoration: none;
+  color: #272626;
+}

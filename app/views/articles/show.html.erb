@@ -1,7 +1,19 @@
-<h1><%= @article.title %></h1>
-<p><%= @article.content %></p>
+<div class="container">
+  <div class="header">
+    <h1>Wikinimous</h1>
+    <%= link_to "Home", articles_path, class: "btn btn-ghost" %>
+  </div>
 
-<p><%= link_to 'Edit', edit_article_path  %></p>
-<%= link_to 'Delete',  article_path(@article),
-data: { turbo_method: :delete, turbo_confirm: "Delete #{@article.title}?" } %>
-<p><%= link_to 'Back to lists', articles_path %></p>
+<div class="content">
+  <div class="title-box">
+    <h1><%= @article.title %></h1>
+    <h2>
+      <%= link_to ('<i class="fa-regular fa-pen-to-square"></i>').html_safe, edit_article_path  %>
+      <%= link_to ('<i class="fa-regular fa-trash-can"></i>').html_safe,  article_path(@article),
+      data: { turbo_method: :delete, turbo_confirm: "Delete #{@article.title}?" } %>
+    </h2>
+  </div>
+  <p><%= @article.content %></p>
+
+
+</div>
